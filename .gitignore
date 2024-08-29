@@ -1,0 +1,39 @@
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+package-lock.json
+yarn.lock
+.pnpmfile.cjs
+# Logs
+logs/
+*.log
+*.log.*
+# Directorios temporales
+tmp/
+temp/
+# Directorios de construcción
+dist/
+build/
+.out/
+.cache/
+# Archivos de entorno
+.env
+.env.*
+# Angular
+.angular/cache/
+.angular/config.json
+# Directorio de pruebas de Angular
+/coverage/
+# Sistema operativo o IDE
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+# Otros directorios o archivos generados
+*.bak
+*.tmp
+*.temp

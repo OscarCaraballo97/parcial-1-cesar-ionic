@@ -1,0 +1,18 @@
+<ion-content>
+
+<ion-card>
+<h1>
+  {{receiveinter.title}}
+</h1>
+<div class="img-container">
+  <img src="{{receiveinter.image}}" alt="image of product">
+  <p>{{receiveinter.category}}</p>
+  <p>{{receiveinter.price | currency}}</p>
+</div>
+<ion-button (click)="DelItem(receiveinter.id)" fill="clear" color="danger" class="delete">
+<ion-icon name="trash">
+</ion-icon>
+</ion-button>
+
+</ion-card>
+</ion-content>

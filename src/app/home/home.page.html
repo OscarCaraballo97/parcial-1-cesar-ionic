@@ -1,0 +1,30 @@
+
+<ion-content [fullscreen]="true">
+<ion-title>E-commerse</ion-title>
+  <ion-toolbar>
+    <ion-buttons slot="end">
+      <ion-button [routerLink]="['/cart']">
+        <ion-icon name="cart-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-list>
+    <div class="selector">
+    <ion-select aria-label="Selection"interface="modal"placeholder="Select Selection"(ionChange)="OptionSelection($event)">
+      <ion-select-option value="electronics">Electronics</ion-select-option>
+      <ion-select-option value="jewelery">Jewelery</ion-select-option>
+      <ion-select-option value="men's clothing">MenSClothing</ion-select-option>
+      <ion-select-option value="women's clothing">WomenSClothing</ion-select-option>
+      <ion-select-option value="home">All</ion-select-option>
+      </ion-select>
+      </div>
+      <ion-list-header>
+        <ion-label>Products</ion-label>
+      </ion-list-header>
+    </ion-list>
+  </ion-toolbar>
+
+  <app-cards (doClick)="doNavegate($event)" *ngFor="let item of products" [productsL]="item">
+  </app-cards>
+
+</ion-content>
+

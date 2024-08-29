@@ -1,0 +1,16 @@
+<ion-card>
+  <img alt="" src="{{productsL.image}}" />
+  <ion-card-header>
+    <ion-card-title>{{productsL.title}}</ion-card-title>
+    <ion-card-subtitle>{{productsL.description}}</ion-card-subtitle>
+
+  </ion-card-header>
+
+  <ion-card-content>
+    <div>
+      <p>{{ productsL.price | currency}}</p>
+      <p>{{ productsL.rating.rate }}  <ion-icon *ngFor="let star of [].constructor(stars)" name="star"></ion-icon> </p>
+    </div>
+  </ion-card-content>
+  <ion-button (click)="click(productsL.id)">Details</ion-button>
+</ion-card>

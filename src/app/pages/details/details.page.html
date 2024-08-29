@@ -1,0 +1,33 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button default-href="#"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Back Button</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  @if(products){
+    <h1>
+      {{products.title}}
+    </h1>
+
+    <div class="img">
+      <img src="{{products.image}}" alt="image of product">
+    </div>
+
+
+    <div>
+      <p>{{products.category}}</p>
+      <p>{{products.price | currency}}</p>
+    </div>
+    <div class="description">
+      <h3>Description</h3>
+      <p>{{products.description}}</p>
+    </div>
+    <p>{{ products.rating.rate }}  <ion-icon *ngFor="let star of [].constructor(stars)" name="star"></ion-icon> </p>
+  }
+</ion-content>
+
+<ion-button (click)="click()">Add to cart</ion-button>
